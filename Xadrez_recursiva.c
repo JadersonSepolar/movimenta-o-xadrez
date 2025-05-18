@@ -7,14 +7,6 @@ void movertorre(int casas){
         movertorre(casas - 1);
     }
 }
-// Recursividade Bispo
-void moverbispo(int casas){
-
-    if (casas > 0){
-         printf("cima, Direita. \n");
-        moverbispo(casas - 1);
-    }
-}
 // Recursividade Rainha
 void moverrainha(int casas){
 
@@ -25,16 +17,41 @@ void moverrainha(int casas){
     }
 }
 int main(){
+
     printf("movimento da Torre:\n");
     movertorre(5);
-    printf("_______________\n\n");
-
-    printf("movimento do Bispo:\n");
-    moverbispo(5);
     printf("_______________\n\n");
 
     printf("movimento da Rainha:\n");
     moverrainha(8);
     printf("_______________\n\n");
+
+// Movimentação do Bispo
+    printf("Movimento do Bispo:\n");
+ for (int i = 0; i < 5; i++){
+
+        for (int j = 0; j < 1; j++){
+            printf("Cima,");
+        }
+        printf("Direita.\n");
+ }
+    printf("___________________\n\n");
+
+// Movimento do cavalo
+printf("Movimento do Cavalo:\n");
+
+ int a = 1, b = 1;
+    while (a <= 2){
+        printf("cima\n");
+        a++;
+    }
+
+        if (b <= 1){
+         printf("Direita.\n\n");
+         b++;
+            
+
+        }
+    
     return 0;
 }
